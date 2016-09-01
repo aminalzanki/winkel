@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'oeder_items/create'
+  get 'order_items/create'
 
-  get 'oeder_items/update'
+  get 'order_items/update'
 
-  get 'oeder_items/destroy'
+  get 'order_items/destroy'
 
   get 'carts/show'
 
