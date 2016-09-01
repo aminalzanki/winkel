@@ -456,7 +456,7 @@ li.searchbox.searchbox-open {padding-top: 0;}
   top: 0;
   width: 100%;
 }
-.choose_area {background: rgba(0, 0, 0, 0) url("images/choose/choose-bg.jpg") no-repeat fixed center center / cover ;}
+.choose_area {background: rgba(0, 0, 0, 0) #{ image-url('choose-bg.jpg') } no-repeat fixed center center / cover ;}
 /*-------------------------------
 [5.1 Choose-Text ]
 --------------------------------*/
