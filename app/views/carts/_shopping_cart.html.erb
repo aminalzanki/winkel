@@ -12,7 +12,51 @@
     There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
   </p>
 <% else %>
-  <% @order_items.each do |order_item| %>
-    <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
-  <% end %>
+
+<!-- Cart-Page-Content-Start -->
+	<div class="cart-page-content page-section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="cart_title">
+						<h4>Shopping Cart</h4>
+					</div>
+					<div class="table-responsive">
+						<table class="cart-table text-center">
+							<thead>
+								<tr id="cart_th">
+									<th>#</th>
+									<th>Image</th>
+									<th>Product name</th>
+									<th>QUANTITY</th>
+									<th>Price</th>
+									<th>Total</th>
+									<th>Remove</th>
+								</tr>
+							</thead>
+							<tbody>
+                <% @order_items.each do |order_item| %>
+                <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
+                <% end %>
+
+                <tr id="total_colspan">
+                  <td colspan="3" class="text-left">total</td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    190.98$
+                  </td>
+                  <td colspan="2">
+                    <a class="checkPageBtn" href="#">add to wishlist</a>
+                  </td>
+                </tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Cart-Page-Content-End -->
 <% end %>
