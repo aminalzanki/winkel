@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get 'order_items/create'
 
   get 'order_items/update'

@@ -18,6 +18,9 @@
     <%= render partial: 'partials/header' %>
     </div>
 
+    <% if notice %><div class="alert alert-info"><%= notice %></div><% end %>
+    <% if alert %><div class="alert alert-warning"><%= alert %></div><% end %>
+
     <%= yield %>
 
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
