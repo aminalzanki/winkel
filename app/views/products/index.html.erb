@@ -1,3 +1,5 @@
-<% @products.each do |product| %>
-      <%= render "product_row", product: product, order_item: @order_item %>
-    <% end %>
+<div id="products">
+  <%= render partial: "products", locals: { products: @products, order_item: @order_item } %>
+</div>
+<!-- - @products.each do |product|
+  = render "product_row", product: product, order_item: @order_item -->
