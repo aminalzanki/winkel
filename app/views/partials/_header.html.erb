@@ -31,9 +31,11 @@
 								<% end %>
 
 								<li class="searchbox">
-									<input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
-									<input type="submit" class="searchbox-submit" value="">
-									<span class="searchbox-icon"><i class="fa fa-search"></i></span>
+									<%= form_for :search, url: products_path, method: :get, remote: true do |f| %>
+										<%= f.text_field :keyword, placeholder: "Search...", class: "searchbox-input", required: true%>
+										<%= f.submit "Search", class: "searchbox-submit" %>
+										<span class="searchbox-icon"><i class="fa fa-search"></i></span>
+									<% end %>
 								</li>
 							</ul>
 						</div>
